@@ -231,7 +231,7 @@ class YumUpdateChecker(object):
         else:
             days_since_update = self.calc_days_ago(last_update)
             if days_since_update == 1:
-                message = '1 day since last yum update'
+                message = '<prtg><result><channel>Last Update [days]</channel><value>%d</value></result></prtg>' % days_since_update
             else:
                 message = '<prtg><result><channel>Last Update [days]</channel><value>%d</value></result></prtg>' % days_since_update
 
